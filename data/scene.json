@@ -1,0 +1,137 @@
+{
+  "id" : "89a7e518-667c-43f2-b26a-3e705991c7c1",
+  "entities" : {
+    "28ecd7f4-2197-48ff-89b5-a60f36a650bb" : {
+      "id" : "28ecd7f4-2197-48ff-89b5-a60f36a650bb",
+      "initialized" : false
+    },
+    "43b7e7a4-2a9c-44d1-96d5-a9ab8abfb547" : {
+      "id" : "43b7e7a4-2a9c-44d1-96d5-a9ab8abfb547",
+      "initialized" : false
+    },
+    "2e7c9992-aa53-4557-a304-35c1d262e001" : {
+      "id" : "2e7c9992-aa53-4557-a304-35c1d262e001",
+      "initialized" : false
+    },
+    "390e9c1a-bb9c-4f2a-af97-616e6a8a54ce" : {
+      "id" : "390e9c1a-bb9c-4f2a-af97-616e6a8a54ce",
+      "initialized" : false
+    }
+  },
+  "entityComponents" : {
+    "28ecd7f4-2197-48ff-89b5-a60f36a650bb" : {
+      "Name" : {
+        "type" : "Name",
+        "value" : "Test Entity 1"
+      },
+      "Transform" : {
+        "type" : "Transform",
+        "transform" : {
+          "id" : "03e68682-9d9d-4806-b6e7-9f5d1173243c",
+          "matrix" : [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0 ],
+          "position" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "scale" : {
+            "x" : 1.0,
+            "y" : 1.0,
+            "z" : 1.0
+          },
+          "rotation" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          }
+        }
+      }
+    },
+    "43b7e7a4-2a9c-44d1-96d5-a9ab8abfb547" : {
+      "Name" : {
+        "type" : "Name",
+        "value" : "Test Entity"
+      },
+      "Transform" : {
+        "type" : "Transform",
+        "transform" : {
+          "id" : "7dfb725b-3ef1-4fcb-bb0f-1d398801180f",
+          "matrix" : [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0 ],
+          "position" : {
+            "x" : 1.0,
+            "y" : 1.0,
+            "z" : 1.0
+          },
+          "scale" : {
+            "x" : 1.0,
+            "y" : 1.0,
+            "z" : 1.0
+          },
+          "rotation" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          }
+        }
+      }
+    },
+    "2e7c9992-aa53-4557-a304-35c1d262e001" : {
+      "Transform" : {
+        "type" : "Transform",
+        "transform" : {
+          "id" : "0855cbf7-7a7d-4982-b13a-27ca2c8d3477",
+          "matrix" : [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+          "position" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "scale" : {
+            "x" : 1.0,
+            "y" : 1.0,
+            "z" : 1.0
+          },
+          "rotation" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          }
+        }
+      }
+    },
+    "390e9c1a-bb9c-4f2a-af97-616e6a8a54ce" : {
+      "Name" : {
+        "type" : "Name",
+        "value" : "Test Entity 2"
+      },
+      "Transform" : {
+        "type" : "Transform",
+        "transform" : {
+          "id" : "dee4b566-677b-4059-bdb1-8d38e3989043",
+          "matrix" : [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0 ],
+          "position" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "scale" : {
+            "x" : 1.0,
+            "y" : 1.0,
+            "z" : 1.0
+          },
+          "rotation" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          }
+        }
+      }
+    }
+  },
+  "entityChildren" : {
+    "28ecd7f4-2197-48ff-89b5-a60f36a650bb" : [ ],
+    "43b7e7a4-2a9c-44d1-96d5-a9ab8abfb547" : [ "28ecd7f4-2197-48ff-89b5-a60f36a650bb", "390e9c1a-bb9c-4f2a-af97-616e6a8a54ce" ],
+    "2e7c9992-aa53-4557-a304-35c1d262e001" : [ "43b7e7a4-2a9c-44d1-96d5-a9ab8abfb547" ],
+    "390e9c1a-bb9c-4f2a-af97-616e6a8a54ce" : [ ]
+  }
+}
