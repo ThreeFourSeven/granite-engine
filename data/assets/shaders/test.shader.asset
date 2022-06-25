@@ -1,8 +1,0 @@
-{
-  "type" : "Text",
-  "id" : "1fcb5fa0-c340-468d-a013-d9a29c98ca8f",
-  "location" : {
-    "value" : "data/assets/shaders/test.shader",
-    "type" : "System"
-  }
-}

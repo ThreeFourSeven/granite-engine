@@ -4,3 +4,4 @@ target/
 data/log
 data/config
 versions
+*.asset

@@ -1,8 +1,0 @@
-{
-  "type" : "Scene",
-  "id" : "f5e28f9f-25ff-471f-bcdb-09b6ab71443c",
-  "location" : {
-    "value" : "data/assets/scenes/cube.fbx",
-    "type" : "System"
-  }
-}
