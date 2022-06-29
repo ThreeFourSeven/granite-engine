@@ -1,85 +1,29 @@
 {
-  "id" : "89a7e518-667c-43f2-b26a-3e705991c7c1",
+  "id" : "6033a8e9-ad1b-4020-80a8-a3d735e9dc74",
   "entities" : {
-    "28ecd7f4-2197-48ff-89b5-a60f36a650bb" : {
-      "id" : "28ecd7f4-2197-48ff-89b5-a60f36a650bb",
-      "initialized" : false
+    "454358b8-3013-47b2-b96f-c1532367bb55" : {
+      "id" : "454358b8-3013-47b2-b96f-c1532367bb55",
+      "initialized" : true
     },
-    "43b7e7a4-2a9c-44d1-96d5-a9ab8abfb547" : {
-      "id" : "43b7e7a4-2a9c-44d1-96d5-a9ab8abfb547",
-      "initialized" : false
+    "74fc8e55-37e0-47b0-9825-590700e8915b" : {
+      "id" : "74fc8e55-37e0-47b0-9825-590700e8915b",
+      "initialized" : true
     },
-    "2e7c9992-aa53-4557-a304-35c1d262e001" : {
-      "id" : "2e7c9992-aa53-4557-a304-35c1d262e001",
-      "initialized" : false
+    "d836fa2c-1d64-477e-bbc9-40a659f03a83" : {
+      "id" : "d836fa2c-1d64-477e-bbc9-40a659f03a83",
+      "initialized" : true
     },
-    "390e9c1a-bb9c-4f2a-af97-616e6a8a54ce" : {
-      "id" : "390e9c1a-bb9c-4f2a-af97-616e6a8a54ce",
-      "initialized" : false
+    "711c7653-9887-43b0-a391-8642e614dc10" : {
+      "id" : "711c7653-9887-43b0-a391-8642e614dc10",
+      "initialized" : true
     }
   },
   "entityComponents" : {
-    "28ecd7f4-2197-48ff-89b5-a60f36a650bb" : {
-      "Name" : {
-        "type" : "Name",
-        "value" : "Test Entity 1"
-      },
+    "454358b8-3013-47b2-b96f-c1532367bb55" : {
       "Transform" : {
         "type" : "Transform",
         "transform" : {
-          "id" : "03e68682-9d9d-4806-b6e7-9f5d1173243c",
-          "matrix" : [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0 ],
-          "position" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "scale" : {
-            "x" : 1.0,
-            "y" : 1.0,
-            "z" : 1.0
-          },
-          "rotation" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          }
-        }
-      }
-    },
-    "43b7e7a4-2a9c-44d1-96d5-a9ab8abfb547" : {
-      "Name" : {
-        "type" : "Name",
-        "value" : "Test Entity"
-      },
-      "Transform" : {
-        "type" : "Transform",
-        "transform" : {
-          "id" : "7dfb725b-3ef1-4fcb-bb0f-1d398801180f",
-          "matrix" : [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0 ],
-          "position" : {
-            "x" : 1.0,
-            "y" : 1.0,
-            "z" : 1.0
-          },
-          "scale" : {
-            "x" : 1.0,
-            "y" : 1.0,
-            "z" : 1.0
-          },
-          "rotation" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          }
-        }
-      }
-    },
-    "2e7c9992-aa53-4557-a304-35c1d262e001" : {
-      "Transform" : {
-        "type" : "Transform",
-        "transform" : {
-          "id" : "0855cbf7-7a7d-4982-b13a-27ca2c8d3477",
+          "id" : "929ec6c6-04ab-4033-be2d-f15721f41fd6",
           "matrix" : [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
           "position" : {
             "x" : 0.0,
@@ -96,18 +40,44 @@
             "y" : 0.0,
             "z" : 0.0
           }
-        }
+        },
+        "bufferIndex" : -1
       }
     },
-    "390e9c1a-bb9c-4f2a-af97-616e6a8a54ce" : {
-      "Name" : {
-        "type" : "Name",
-        "value" : "Test Entity 2"
-      },
+    "74fc8e55-37e0-47b0-9825-590700e8915b" : {
       "Transform" : {
         "type" : "Transform",
         "transform" : {
-          "id" : "dee4b566-677b-4059-bdb1-8d38e3989043",
+          "id" : "fbda7519-baa1-43db-940f-0668c14e1ad3",
+          "matrix" : [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0 ],
+          "position" : {
+            "x" : 1.0,
+            "y" : 1.0,
+            "z" : 1.0
+          },
+          "scale" : {
+            "x" : 1.0,
+            "y" : 1.0,
+            "z" : 1.0
+          },
+          "rotation" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          }
+        },
+        "bufferIndex" : -1
+      },
+      "Name" : {
+        "type" : "Name",
+        "value" : "Test Entity"
+      }
+    },
+    "d836fa2c-1d64-477e-bbc9-40a659f03a83" : {
+      "Transform" : {
+        "type" : "Transform",
+        "transform" : {
+          "id" : "a71fbe2b-d44f-4d64-a92d-ab00332aee68",
           "matrix" : [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0 ],
           "position" : {
             "x" : 0.0,
@@ -124,14 +94,48 @@
             "y" : 0.0,
             "z" : 0.0
           }
-        }
+        },
+        "bufferIndex" : -1
+      },
+      "Name" : {
+        "type" : "Name",
+        "value" : "Test Entity 1"
+      }
+    },
+    "711c7653-9887-43b0-a391-8642e614dc10" : {
+      "Transform" : {
+        "type" : "Transform",
+        "transform" : {
+          "id" : "50e80f4f-518a-4dbd-a023-893348214d6b",
+          "matrix" : [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0 ],
+          "position" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "scale" : {
+            "x" : 1.0,
+            "y" : 1.0,
+            "z" : 1.0
+          },
+          "rotation" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          }
+        },
+        "bufferIndex" : -1
+      },
+      "Name" : {
+        "type" : "Name",
+        "value" : "Test Entity 2"
       }
     }
   },
   "entityChildren" : {
-    "28ecd7f4-2197-48ff-89b5-a60f36a650bb" : [ ],
-    "43b7e7a4-2a9c-44d1-96d5-a9ab8abfb547" : [ "28ecd7f4-2197-48ff-89b5-a60f36a650bb", "390e9c1a-bb9c-4f2a-af97-616e6a8a54ce" ],
-    "2e7c9992-aa53-4557-a304-35c1d262e001" : [ "43b7e7a4-2a9c-44d1-96d5-a9ab8abfb547" ],
-    "390e9c1a-bb9c-4f2a-af97-616e6a8a54ce" : [ ]
+    "454358b8-3013-47b2-b96f-c1532367bb55" : [ "74fc8e55-37e0-47b0-9825-590700e8915b" ],
+    "74fc8e55-37e0-47b0-9825-590700e8915b" : [ "d836fa2c-1d64-477e-bbc9-40a659f03a83", "711c7653-9887-43b0-a391-8642e614dc10" ],
+    "d836fa2c-1d64-477e-bbc9-40a659f03a83" : [ ],
+    "711c7653-9887-43b0-a391-8642e614dc10" : [ ]
   }
 }

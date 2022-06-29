@@ -3,7 +3,10 @@ package granite.core.asset;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import granite.Granite;
 import lombok.Getter;
 import lombok.Setter;
@@ -46,10 +49,6 @@ public abstract class Asset {
 
   public Asset() {
     this(null, null);
-  }
-
-  public void register() {
-    Granite.assets.register(this);
   }
 
   public void load() {
@@ -119,12 +118,44 @@ public abstract class Asset {
     return load(TextAsset::new, location);
   }
 
+  public static String loadString(AssetLocation location) {
+    return loadText(location).getValue().toString();
+  }
+
   public static JsonAsset loadJson(AssetLocation location) {
     return load(JsonAsset::new, location);
   }
 
   public static AISceneAsset loadScene(AssetLocation location) {
     return load(AISceneAsset::new, location);
+  }
+
+  public static <T> T loadObject(AssetLocation location, T defaultValue, Class<T> tClass) {
+    T value = defaultValue;
+    JsonAsset js = loadJson(location);
+    JsonNode json = js.getValue();
+    if(json != null) {
+      try {
+        T v = new ObjectMapper().treeToValue(json, tClass);
+        if(v != null)
+          value = v;
+      } catch (Exception e) {
+        e.printStackTrace();
+        logger.warning(e.getLocalizedMessage());
+        logger.warningf("Failed to convert JsonNode %s to object %s", json.toString(), tClass.getCanonicalName());
+      }
+    }
+    try {
+
+      JsonNode j = new ObjectMapper().valueToTree(value);
+      if(j != null)
+        json = j;
+    } catch (Exception e) {
+      e.printStackTrace();
+      logger.warning(e.getLocalizedMessage());
+      logger.warningf("Failed to convert %s to a JsonNode", value.toString());
+    }
+    return value;
   }
 
   public static <V extends Asset> V save(Supplier<V> constructor, AssetLocation location, Object value) {
@@ -141,6 +172,20 @@ public abstract class Asset {
 
   public static JsonAsset saveJson(AssetLocation location, JsonNode value) {
     return save(JsonAsset::new, location, value);
+  }
+
+  public static <T> JsonAsset saveObject(AssetLocation location, T value) {
+    JsonNode json = JsonNodeFactory.instance.objectNode();
+    try {
+      JsonNode j = new ObjectMapper().valueToTree(value);
+      if(j != null)
+        json = j;
+    } catch (Exception e) {
+      e.printStackTrace();
+      logger.warning(e.getLocalizedMessage());
+      logger.warningf("Failed to convert %s to a JsonNode", value.toString());
+    }
+    return saveJson(location, json);
   }
 
   public static AISceneAsset saveScene(AssetLocation location, AIScene value) {

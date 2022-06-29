@@ -13,7 +13,6 @@ public class Granite {
 
   public static volatile GraniteConfig config = new GraniteConfig();
   public static volatile GraniteRuntime runtime = new GraniteRuntime();
-  public static volatile AssetStore assets = new AssetStore();
 
   public static void loadConfig() {
     JsonAsset ja = Asset.loadJson(Asset.jarLocation("granite.json"));

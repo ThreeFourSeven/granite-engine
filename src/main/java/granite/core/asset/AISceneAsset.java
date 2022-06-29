@@ -1,6 +1,8 @@
 package granite.core.asset;
 
 import granite.core.logger.Logger;
+import granite.core.scene.SceneTemplate;
+import granite.core.scene.entity.Entity;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.assimp.AIScene;
 import org.lwjgl.assimp.Assimp;
@@ -25,6 +27,18 @@ public class AISceneAsset extends Asset {
     return (AIScene)super.getValue();
   }
 
+  public SceneTemplate createSceneTemplate() {
+    SceneTemplate template = new SceneTemplate();
+    Entity root = new Entity();
+    template.entities.put(root.getId(), root);
+
+    return template;
+  }
+
+  private SceneTemplate addAINodeToTemplate(SceneTemplate template) {
+    return template;
+  }
+
   @Override
   protected AIScene read(InputStream stream) {
     AIScene scene = null;
@@ -37,9 +51,10 @@ public class AISceneAsset extends Asset {
         int flags = Assimp.aiProcess_JoinIdenticalVertices |
           Assimp.aiProcess_Triangulate |
           Assimp.aiProcess_ValidateDataStructure;
-        AIScene s = Assimp.aiImportFileFromMemory(buffer, flags, "");
-        if(s != null)
-          scene = s;
+        try(AIScene s = Assimp.aiImportFileFromMemory(buffer, flags, "")) {
+          if(s != null)
+            scene = s;
+        }
       }
     } catch (Exception e) {
       e.printStackTrace();

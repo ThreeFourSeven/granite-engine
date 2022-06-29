@@ -11,7 +11,6 @@ public class GraniteRuntime {
 
   private final Logger logger = new Logger(GraniteRuntime.class);
 
-
   public final AudioRuntime audioRuntime = new AudioRuntime();
   public final ClientRuntime clientRuntime = new ClientRuntime();
 

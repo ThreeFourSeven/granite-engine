@@ -1,6 +1,7 @@
 package granite.core.scene;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import granite.core.asset.AssetStore;
 import granite.core.logger.Logger;
 import granite.core.scene.entity.component.Component;
 import granite.core.scene.entity.component.ComponentType;
@@ -31,6 +32,8 @@ public class Scene {
   protected final Map<UUID, Map<ComponentType, Component>> entityComponents = new HashMap<>();
   protected final Map<UUID, Set<UUID>> entityChildren = new HashMap<>();
   protected final Map<UUID, UUID> entityParents = new HashMap<>();
+
+  protected final AssetStore assetStore = new AssetStore();
 
   @Getter
   protected final Entity rootEntity = createEntity((Entity)null, new TransformComponent());

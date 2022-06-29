@@ -2,6 +2,7 @@ package granite.client;
 
 import granite.core.asset.Asset;
 import granite.core.asset.AISceneAsset;
+import granite.core.asset.AssetReference;
 import granite.core.asset.TextAsset;
 import granite.core.command.Command;
 import granite.core.graphics.WindowOptions;
@@ -72,15 +73,8 @@ public class ClientRuntime implements Runnable {
       .addPredicateBinding(() -> window.shouldClose());
 
     //TEMP
-    TextAsset ta = new TextAsset(Asset.systemLocation("data/assets/shaders/test.shader"));
-    ta.register();
-    ta.load();
 
-    AISceneAsset sa = new AISceneAsset(Asset.systemLocation("data/assets/scenes/cube.fbx"));
-    sa.register();
-    sa.load();
-
-//    scene.addEntitySystem(new DebugSystem());
+    scene.addEntitySystem(new DebugSystem());
 
     Entity test = scene.createEntity(new NameComponent("Test Entity"), new TransformComponent(new Transform().setPosition(1, 1, 1)));
     scene.createEntity(test, new NameComponent("Test Entity 1"), new TransformComponent());
@@ -90,7 +84,7 @@ public class ClientRuntime implements Runnable {
 
     SceneTemplate sceneTemplate = scene.createTemplateFromEntity(scene.getRootEntity());
 
-    FileUtil.writeObjectToFile("data/scene.json", sceneTemplate, SceneTemplate.class);
+    Asset.saveObject(Asset.systemLocation("data/scene.json"), sceneTemplate);
 
   }
 
